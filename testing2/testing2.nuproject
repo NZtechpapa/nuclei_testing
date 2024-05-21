@@ -1,0 +1,23 @@
+SDK_CONFIG: 
+   Debug: 
+      core: N203E
+      download: ILM
+      extra_asmflags: 
+      archext: 
+      extra_cxxflags: 
+      cmodel: medlow
+      extra_commonflags: -fno-code-hoisting -fno-tree-vectorize -finline-functions -falign-functions=4
+         -falign-jumps=4 -falign-loops=4 -finline-limit=200 -fno-if-conversion -fno-if-conversion2 -fipa-pta
+         -fselective-scheduling -fno-tree-loop-distribute-patterns -funroll-loops -funroll-all-loops -fno-delete-null-pointer-checks
+         -fno-rename-registers -mbranch-cost=1 --param fsm-scale-path-stmts=5 --param max-average-unrolled-insns=200
+         --param max-grow-copy-bb-insns=20 --param max-jump-thread-duplication-stmts=25 --param hot-bb-frequency-fraction=4
+         --param unroll-jam-min-percent=0
+      abi: ilp32e
+      arch: rv32emac
+      toolchain: gnu
+      extra_cflags: 
+      extra_ldflags: -Wl,--check-sections -Wl,--no-warn-rwx-segments  -u errno
+NPK_PACKS: 
+-  owner: nuclei
+   name: sdk-nuclei_sdk
+   version: 0.5.0
